@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="screen-orientation" content="portrait">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>熊猫书院</title>
+    <style>
+        html * {
+            padding: 0;
+            margin: 0;
+            -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            /*background: #FD9940;*/
+        }
+
+        /* Timer*/
+        .timer {
+            width: 32px;
+            height: 32px;
+            background-color: transparent;
+            box-shadow: inset 0 0 0 2px #FD9940;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .timer:after, .timer:before {
+            position: absolute;
+            content: "";
+            background-color: #FD9940;
+        }
+
+        .timer:after {
+            width: 9px;
+            height: 2px;
+            top: 15px;
+            left: 15px;
+            -webkit-transform-origin: 1px 1px;
+            -moz-transform-origin: 1px 1px;
+            transform-origin: 1px 1px;
+            -webkit-animation: minhand 2s linear infinite;
+            -moz-animation: minhand 2s linear infinite;
+            animation: minhand 2s linear infinite;
+        }
+
+        .timer:before {
+            width: 6px;
+            height: 2px;
+            top: 15px;
+            left: 15px;
+            -webkit-transform-origin: 1px 1px;
+            -moz-transform-origin: 1px 1px;
+            transform-origin: 1px 1px;
+            -webkit-animation: hrhand 8s linear infinite;
+            -moz-animation: hrhand 8s linear infinite;
+            animation: hrhand 8s linear infinite;
+        }
+
+        @-webkit-keyframes minhand {
+            0% {
+                -webkit-transform: rotate(0deg)
+            }
+            100% {
+                -webkit-transform: rotate(360deg)
+            }
+        }
+
+        @-moz-keyframes minhand {
+            0% {
+                -moz-transform: rotate(0deg)
+            }
+            100% {
+                -moz-transform: rotate(360deg)
+            }
+        }
+
+        @keyframes minhand {
+            0% {
+                transform: rotate(0deg)
+            }
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+
+        @-webkit-keyframes hrhand {
+            0% {
+                -webkit-transform: rotate(0deg)
+            }
+            100% {
+                -webkit-transform: rotate(360deg)
+            }
+        }
+
+        @-moz-keyframes hrhand {
+            0% {
+                -moz-transform: rotate(0deg)
+            }
+            100% {
+                -moz-transform: rotate(360deg)
+            }
+        }
+
+        @keyframes hrhand {
+            0% {
+                transform: rotate(0deg)
+            }
+            100% {
+                transform: rotate(360deg)
+            }
+        }
+
+        .help {
+            width: 30px;
+            height: 30px;
+            border: 1px #FD9940 solid;
+            border-radius: 50%;
+            -webkit-animation: rotation 1s ease-in-out infinite;
+            -moz-animation: rotation 1s ease-in-out infinite;
+            animation: rotation 1s ease-in-out infinite;
+            margin: 30px auto;
+        }
+
+        .help:after {
+            width: 5px;
+            height: 5px;
+            background-color: #FD9940;
+            border-radius: 100%;
+            position: absolute;
+            content: "";
+        }
+
+        @-webkit-keyframes rotation {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @-moz-keyframes rotation {
+            0% {
+                -moz-transform: rotate(0deg);
+            }
+            100% {
+                -moz-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        #loading {
+            width: 100%;
+            height: 100%;
+            margin: 150px 0 0;
+            /*display: flex;
+            justify-content: center;
+            align-items: center;*/
+        }
+
+        .text {
+            text-align: center;
+            /*color: rgba(255,255,255,.76);*/
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .timer {
+            margin: 0 0 15px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<div id="loading">
+    <div class="text">
+        <div class="help"></div>
+        <h4>正在加载中,请稍等...</h4>
+        <p></p>
+    </div>
+</div>
+<script>
+    /*setTimeout(function () {
+     document.getElementById('loading').setAttribute("class", "loaded");
+     }, 100);*/
+    setTimeout(function () {
+        document.querySelector(".text h4").innerHTML = "网络不稳定";
+        document.querySelector(".text p").innerHTML = "请关闭页面回复【打不开】获取快速通道";
+    }, 5000);
+    var url = '{$url}';
+    if (url != '' && url != null)window.location = url;
+</script>
+</body>
+</html>

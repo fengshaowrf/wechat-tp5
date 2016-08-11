@@ -1,0 +1,35 @@
+{
+    "name": "forchange/basetp5",
+    "description": "基于tp5的微信基础项目",
+    "type": "project",
+    "keywords": [
+        "wechat",
+        "thinkphp"
+    ],
+    "homepage": "http://www.forchange.cn",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "forchange",
+            "email": "bling@forchange.cn"
+        }
+    ],
+  "repositories": [
+    {"type": "composer", "url": "https://packagist.org/"},
+    {"packagist": false}
+  ],
+  "require": {
+        "php": ">=5.4.0",
+        "topthink/framework": "*",
+        "nesbot/carbon": "^1.21",
+        "pluxwill/wechat-php-sdk": "dev-master",
+        "php-curl-class/php-curl-class": "^4.11"
+    },
+    "extra": {
+        "think-path": "thinkphp"
+    },
+    "minimum-stability": "dev",
+    "config": {
+        "preferred-install": "dist"
+    }
+}
