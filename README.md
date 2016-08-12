@@ -38,6 +38,8 @@ index   //普通模块,配合模板使用
           Base.php //基类
           Home.php  //首页关键字对应的行为
           Scan.php  //扫码行为
+          
+const.demo.php //需要复制并重命名为const.php才能使用,为了保证多环境配置信息可以区分
 ```
 
 有混乱或有问题的地方欢迎反馈
