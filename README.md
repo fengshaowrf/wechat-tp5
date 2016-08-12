@@ -25,6 +25,7 @@ common //公共模块
         PandaUserHelper.php //熊猫书院用户助手example
     model  //模型
         Config.php  //项目配置表(公众号appid,sercret,支付配置,host)
+        config.sql  //配置表的sql
     service  //服务
         OnsService // 生产消息到阿里云mq消息队列
 consumer  //消费者模块
