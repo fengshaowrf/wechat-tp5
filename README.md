@@ -12,12 +12,6 @@ wechat-dev-tp5
 > ThinkPHP5的运行环境要求PHP5.4以上。
 
 
-## 使用 Composer 安装 ThinkPHP5
-~~~
-composer create-project topthink/think tp5 dev-master --prefer-dist
-~~~
-> 因为目前 ThinkPHP 5 正处于高速发展阶段，所以目前只能通过 dev-master 分支来初始化项目
-
 ## 目录结构
 
 项目结构同thinkphp5.0官方结构,可以查看官方文档 [ThinkPHP5源码](https://github.com/top-think/think)
