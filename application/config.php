@@ -240,4 +240,10 @@ return [
     //阿里云配置
     'ons_sk' => ONS_SK,
     'ons_ak' => ONS_AK,
+
+    //队列消息配置
+    'queue'=>[
+        'type'=>'database' //驱动类型，可选择 sync(默认):同步执行，database:数据库驱动,redis:Redis驱动,topthink:Topthink驱动
+        //或其他自定义的完整的类名
+    ]
 ];

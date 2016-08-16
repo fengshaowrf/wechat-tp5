@@ -14,16 +14,14 @@
             "email": "bling@forchange.cn"
         }
     ],
-  "repositories": [
-    {"type": "composer", "url": "https://packagist.org/"},
-    {"packagist": false}
-  ],
   "require": {
         "php": ">=5.4.0",
         "topthink/framework": "*",
         "nesbot/carbon": "^1.21",
         "pluxwill/wechat-php-sdk": "dev-master",
-        "php-curl-class/php-curl-class": "^4.11"
+        "php-curl-class/php-curl-class": "^4.11",
+        "topthink/think-testing": "^1.0",
+        "topthink/think-queue": "^1.0"
     },
     "extra": {
         "think-path": "thinkphp"
